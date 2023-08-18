@@ -30,4 +30,11 @@ class SortTest {
 
         assertArrayEquals(sorted, arr);
     }
+
+    @Test
+    public void testBubbleSort2() {
+        sort.bubbleSort2(arr);
+
+        assertArrayEquals(sorted, arr);
+    }
 }
