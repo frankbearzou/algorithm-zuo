@@ -37,4 +37,11 @@ class SortTest {
 
         assertArrayEquals(sorted, arr);
     }
+
+    @Test
+    public void testInsertionSort() {
+        sort.insertionSort(arr);
+
+        assertArrayEquals(sorted, arr);
+    }
 }
