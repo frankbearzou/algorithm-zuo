@@ -20,4 +20,14 @@ class BinarySearchTest {
     void testBinarySearch() {
         assertTrue(binarySearch.binarySearch(arr, 3));
     }
+
+    @Test
+    void testNearestIndex() {
+        assertEquals(1, binarySearch.nearestIndex(new int[]{1,2,2,2,3,3,4,5}, 2));
+    }
+
+    @Test
+    void testRegionMin() {
+        assertEquals(1, binarySearch.regionMin(new int[]{5,1,8,6,7,9}));
+    }
 }
