@@ -23,4 +23,10 @@ class XorTest {
     void testXorTwo() {
         assertArrayEquals(new int[]{5,2}, xor.xorTwo(new int[]{1,1,2,2,2,3,3,3,3,4,4,5,5,5,6,6,6,6}));
     }
+
+    @Test
+    void testCountBinaryOnes() {
+        assertEquals(2, xor.countBinaryOnes(5));
+        assertEquals(3, xor.countBinaryOnes(22));
+    }
 }

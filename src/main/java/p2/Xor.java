@@ -30,4 +30,15 @@ public class Xor {
         int res2 = firstXor ^ res1;
         return new int[]{res1, res2};
     }
+
+    // count how many ones in the binary n
+    public int countBinaryOnes(int n) {
+        int res = 0;
+        while (n != 0) {
+            int rightOne = n & (~n + 1);
+            n = n ^ rightOne;
+            res++;
+        }
+        return res;
+    }
 }
