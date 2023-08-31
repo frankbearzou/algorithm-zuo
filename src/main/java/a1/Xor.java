@@ -1,4 +1,4 @@
-package p2;
+package a1;
 
 public class Xor {
     // all occur even times, except only one number occurs odd times. find that number occurs odd times

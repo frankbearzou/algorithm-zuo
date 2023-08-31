@@ -1,4 +1,4 @@
-package p4;
+package a3;
 
 public class QuickSort {
     public void quickSort(int[] arr) {

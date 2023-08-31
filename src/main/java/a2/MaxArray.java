@@ -1,4 +1,4 @@
-package p3;
+package a2;
 
 public class MaxArray {
     public int max(int[] arr) {

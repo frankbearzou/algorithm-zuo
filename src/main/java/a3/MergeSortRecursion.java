@@ -1,4 +1,4 @@
-package p4;
+package a3;
 
 public class MergeSortRecursion {
     public void mergeSort(int[] arr) {

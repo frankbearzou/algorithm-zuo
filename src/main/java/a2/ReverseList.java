@@ -1,4 +1,4 @@
-package p3;
+package a2;
 
 public class ReverseList {
     public Node reverseNode(Node head) {

@@ -1,4 +1,4 @@
-package p2;
+package a1;
 
 public class BinarySearch {
     public boolean binarySearch(int[] sortedArr, int target) {

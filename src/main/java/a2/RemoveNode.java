@@ -1,4 +1,4 @@
-package p3;
+package a2;
 
 public class RemoveNode {
     public Node removeValue(Node head, int num) {
