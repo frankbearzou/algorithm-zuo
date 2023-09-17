@@ -1,5 +1,7 @@
 package a7;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class NonRecurTraverse {
@@ -65,6 +67,48 @@ public class NonRecurTraverse {
         }
     }
 
+    public void level(Node head) {
+        if (head == null) {
+            return;
+        }
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(head);
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            System.out.print(node.value + " ");
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+    }
+
+    public void maxWidthInLevel(Node head) {
+        if (head == null) {
+            return;
+        }
+
+        int max = 0;
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(head);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            max = Math.max(max, size);
+            for (int i = 0; i < size; i++) {
+                Node node = queue.poll();
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+        }
+        System.out.println("max width: " + max);
+    }
+
     public static void main(String[] args) {
         Node n1 = new Node(1);
         Node n2 = new Node(2);
@@ -91,5 +135,12 @@ public class NonRecurTraverse {
         System.out.println();
         System.out.println("postorder");
         t.postOrder(n1);
+
+        System.out.println();
+        System.out.println("level");
+        t.level(n1);
+
+        System.out.println("max width");
+        t.maxWidthInLevel(n1);
     }
 }
