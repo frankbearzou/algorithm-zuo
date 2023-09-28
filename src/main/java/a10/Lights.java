@@ -36,8 +36,33 @@ public class Lights {
         }
     }
 
+    // greedy
+    public int light2(String street) {
+        char[] arr = street.toCharArray();
+        int index = 0, light = 0;
+        while (index < arr.length) {
+            if (arr[index] == 'X') {
+                index++;
+            } else {
+                light++;
+                if (index + 1 >= arr.length) {
+                    index++;
+                } else {
+                    if (arr[index + 1] == 'X') {
+                        index = index + 2;
+                    } else {
+                        index = index + 3;
+                    }
+                }
+            }
+        }
+        return light;
+    }
+
     public static void main(String[] args) {
         Lights lights = new Lights();
-        System.out.println(lights.light("X...XXX......X."));
+        String street = "X...XXX......X.";
+        System.out.println(lights.light(street));
+        System.out.println(lights.light2(street));
     }
 }
