@@ -1,5 +1,5 @@
 plugins {
-	java
+	application
 }
 
 group = "com.example"
@@ -18,6 +18,6 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-tasks.withType<Test> {
+tasks.named<Test>("test") {
 	useJUnitPlatform()
 }
