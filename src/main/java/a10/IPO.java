@@ -15,6 +15,9 @@ public class IPO {
             while (!cost.isEmpty() && cost.peek()[0] <= w) {
                 profit.offer(cost.poll());
             }
+            if (profit.isEmpty()) {
+                return w;
+            }
             w += profit.poll()[1];
         }
 
