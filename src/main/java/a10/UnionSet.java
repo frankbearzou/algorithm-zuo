@@ -45,14 +45,8 @@ public class UnionSet {
         Node parentB = findParent(nodeB);
         int sizeA = sizeMap.get(parentA);
         int sizeB = sizeMap.get(parentB);
-        Node bigger, smaller;
-        if (sizeA >= sizeB) {
-            bigger = parentA;
-            smaller = parentB;
-        } else {
-            bigger = parentB;
-            smaller = parentA;
-        }
+        Node bigger = sizeA >= sizeB ? parentA : parentB;
+        Node smaller = bigger == parentA ? parentB : parentA;
         parentMap.put(smaller, bigger);
         sizeMap.put(bigger, sizeA + sizeB);
         sizeMap.remove(smaller);
